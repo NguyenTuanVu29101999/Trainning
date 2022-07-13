@@ -1,0 +1,22 @@
+{
+  "name": "trainning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NguyenTuanVu29101999/Trainning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NguyenTuanVu29101999/Trainning/issues"
+  },
+  "homepage": "https://github.com/NguyenTuanVu29101999/Trainning#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
