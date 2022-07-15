@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <div>
       <nav className="navbar navbar-expand-sm navbar-light bg-light">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="">
             Trang chủ
-          </a>
-          <button
+          </Link>
+          <button 
             className="navbar-toggler d-lg-none"
             type="button"
             data-bs-toggle="collapse"
@@ -22,14 +23,14 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="collapsibleNavId">
             <ul className="navbar-nav me-auto mt-2 mt-lg-0">
               <li className="nav-item active">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="About">
                   About <span className="visually-hidden">(current)</span>
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Link
-                </a>
+                <Link className="nav-link" to="contact">
+                  Contact
+                </Link>
               </li>
               <li className="nav-item dropdown">
                 <a
@@ -43,7 +44,7 @@ export default function Header() {
                   Dropdown
                 </a>
                 <div className="dropdown-menu" aria-labelledby="dropdownId">
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="">
                     Action 1
                   </a>
                   <a className="dropdown-item" href="#">
