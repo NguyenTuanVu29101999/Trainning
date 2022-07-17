@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 const courses = [
-  {id: 1, name: "A"},
-  {id: 2, name: "B"},
-  {id: 3, name: "C"}
+  { id: 1, name: "A" },
+  { id: 2, name: "B" },
+  { id: 3, name: "C" },
 ];
 
 function Contact() {
@@ -13,39 +13,44 @@ function Contact() {
 
   const handleSubmit = () => {
     //call API
-    console.log({name,email})
-  }
+    console.log({ name, email });
+  };
 
+  const handleSubmitCheckBox = () => {
+    //call API
+    console.log({ id: checked });
+  };
+
+  console.log(checked);
   const handleCheckBox = (id) => {
-    setchecked(prev => [...prev, id])
-  }
-  
-  console.log(checked)
-  return(
-    <div style={{ padding:32 }}>
-        <input
-          value = {name}
-          onChange={e => setname(e.target.value)} 
-         />
-         <input
-         value = {email}
-         onChange={e => setemail(e.target.value)} 
-        />
-        <button onClick={handleSubmit}>Register</button>
+    setchecked((prev) => {
+      const isChecked = checked.includes(id);
+      if (isChecked) {
+        return checked.filter((item) => item !== id);
+      } else {
+        return [...prev, id];
+      }
+    });
+  };
 
-        <h1>Check box</h1>
-        {courses.map((course) => (
-          <div key={course.id}>
-              <input 
-                  type="checkbox"
-                  checked={checked === course.id}
-                  onChange={() => handleCheckBox(course.id)}
+  return (
+    <div style={{ padding: 32 }}>
+      <input value={name} onChange={(e) => setname(e.target.value)} />
+      <input value={email} onChange={(e) => setemail(e.target.value)} />
+      <button onClick={handleSubmit}>Register</button>
 
-              /> {course.name}
-          </div>
-        )) }
-
-
+      <h1>Check box</h1>
+      {courses.map((course) => (
+        <div key={course.id}>
+          <input
+            type="checkbox"
+            checked={checked.includes(course.id)}
+            onChange={() => handleCheckBox(course.id)}
+          />{" "}
+          {course.name}
+        </div>
+      ))}
+      <button onClick={handleSubmitCheckBox}>Register</button>
     </div>
   );
 }

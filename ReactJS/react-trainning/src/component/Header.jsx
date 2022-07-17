@@ -9,7 +9,7 @@ export default function Header() {
           <Link className="navbar-brand" to="">
             Trang chủ
           </Link>
-          <button 
+          <button
             className="navbar-toggler d-lg-none"
             type="button"
             data-bs-toggle="collapse"
@@ -32,25 +32,10 @@ export default function Header() {
                   Contact
                 </Link>
               </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="dropdownId"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <div className="dropdown-menu" aria-labelledby="dropdownId">
-                  <a className="dropdown-item" href="">
-                    Action 1
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Action 2
-                  </a>
-                </div>
+              <li className="nav-item">
+                <Link className="nav-link" to="todolist">
+                  Todo List
+                </Link>
               </li>
             </ul>
             <form className="d-flex my-2 my-lg-0">
