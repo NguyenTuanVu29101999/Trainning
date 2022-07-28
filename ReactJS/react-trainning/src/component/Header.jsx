@@ -37,6 +37,11 @@ export default function Header() {
                   Todo List
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="modal">
+                  Modal
+                </Link>
+              </li>
             </ul>
             <form className="d-flex my-2 my-lg-0">
               <input

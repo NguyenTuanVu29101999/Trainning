@@ -9,12 +9,11 @@ const Default = () => {
   return (
     <div>
       <Header />
-      <Routes>
-        {routes.map((route, idx) => (
-          <Route key={idx} path={route.path} element={route.component}></Route>
-        ))}
-      </Routes>
-
+        <Routes>
+          {routes.map((route, idx) => (
+            <Route key={idx} path={route.path} element={route.component}></Route>
+          ))}
+        </Routes>
       <Footer />
     </div>
   );

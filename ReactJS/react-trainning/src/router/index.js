@@ -3,6 +3,7 @@ import Contact from "../pages/Contact";
 import About from "../pages/About";
 import NotFound from "../pages/NotFound";
 import TodoList from "../pages/TodoList";
+import HomeModal from "../pages/HomeModal";
 
 const routes = [
   { path: "", component: <Home /> },
@@ -10,6 +11,7 @@ const routes = [
   { path: "contact", component: <Contact /> },
   { path: "about", component: <About /> },
   { path: "todolist", component: <TodoList /> },
+  {path: "modal",  component: <HomeModal/> },
   { path: "*", component: <NotFound /> },
 ];
 

@@ -17,9 +17,6 @@ function Home() {
     },
   ];
 
-  const userss = [...users];
-  console.log("userss", userss);
-
   const formatName = () => {
     return userItem;
   };

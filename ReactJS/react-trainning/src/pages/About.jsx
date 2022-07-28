@@ -5,14 +5,14 @@ function About() {
   const infos = {name: "Vũ",age: 18,address: "Hồ chí minh"};
 
   const gifts = [
-    {name:'A', price: 18000},
+    {name: 'A', price: 18000},
     {name: 'B', price: 800000},
     {name: 'C', price: 95000}
   ]
 
   const [info, setinfo] = useState(infos);
   const [count, setcount] = useState(0);
-  const [gift, setgift] = useState();
+  const [gift, setGift] = useState();
   
   const handleUpdate = () => {
     setinfo( prev => ({
@@ -30,7 +30,7 @@ function About() {
   const renderGift = () => {
     const index = Math.floor(Math.random() * gifts.length)
     console.log(gifts[index].name)
-    setgift(gifts[index].name)
+    setGift(gifts[index].name)
   }
 
   return(

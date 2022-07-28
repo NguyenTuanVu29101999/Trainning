@@ -5,7 +5,6 @@ import "../assest/style.css";
 const TodoList = () => {
   const [jobs, setJobs] = useState([]);
   const [todo, setTodo] = useState("");
-  const [loadingCreateOrder, setLoadingCreateOrder] = useState(false);
 
   useEffect(() => {
     axios.get(`https://localhost:44353/api/Home/task`).then((res) => {
